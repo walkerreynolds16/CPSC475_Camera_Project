@@ -2,55 +2,29 @@ package com.example.solution_color;
 
 
 import android.app.Activity;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
-import android.support.v4.content.FileProvider;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.webkit.MimeTypeMap;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import com.library.bitmap_utilities.BitMap_Helpers;
-
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FilePermission;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import static android.support.v7.appcompat.R.styleable.View;
-
 
 public class MainActivity extends AppCompatActivity  {
     private static final int CAMERA_REQUEST = 1888;
     private static final String PREF_NAME = "pathName";
-
-
-    private static final String STORAGE_PATH = "/cameraPhoto/";
-
 
     public Toolbar myToolbar;
     private String currentPhotoPath;
@@ -227,43 +201,8 @@ public class MainActivity extends AppCompatActivity  {
 
             setBitmapAndDisplay(currentPhotoPath);
 
-            DisplayMetrics dm = this.getResources().getDisplayMetrics();
-            Bitmap temp = Camera_Helpers.loadAndScaleImage(currentPhotoPath, dm.heightPixels, dm.widthPixels);
-
-            //Camera_Helpers.saveProcessedImage(temp, Environment.getExternalStorageDirectory().getAbsolutePath() + STORAGE_PATH + "sourcePhoto.png");
         }
     }
-
-
-    public boolean saveImageToExternalStorage(Bitmap image) {
-        String fullPath = Environment.getExternalStorageDirectory().getAbsolutePath() + STORAGE_PATH + "source";
-
-        try {
-            File dir = new File(fullPath);
-            if (!dir.exists()) {
-                dir.mkdirs();
-            }
-
-            OutputStream fOut = null;
-            File file = new File(fullPath, "sourcePhoto.png");
-            file.createNewFile();
-            fOut = new FileOutputStream(file);
-
-    // 100 means no compression, the lower you go, the stronger the compression
-            image.compress(Bitmap.CompressFormat.PNG, 100, fOut);
-            fOut.flush();
-            fOut.close();
-
-            MediaStore.Images.Media.insertImage(this.getContentResolver(), file.getAbsolutePath(), file.getName(), file.getName());
-
-            return true;
-
-        } catch (Exception e) {
-            Log.e("saveToExternalStorage()", e.getMessage());
-            return false;
-        }
-    }
-
 
     @Override
     protected void onStop() {
@@ -274,7 +213,7 @@ public class MainActivity extends AppCompatActivity  {
         SharedPreferences.Editor editor = sp.edit();
 
         editor.putString("path", currentPhotoPath);
-        editor.commit();
+        editor.apply();
 
 
 
