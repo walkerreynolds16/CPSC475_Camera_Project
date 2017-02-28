@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Feb 28 00:59:54 EST 2017
+#Tue Feb 28 03:26:57 EST 2017
 122.file=C\:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png
 60.set=ANDROID_RESOURCE
 129.file=C\:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_screen_simple.xml

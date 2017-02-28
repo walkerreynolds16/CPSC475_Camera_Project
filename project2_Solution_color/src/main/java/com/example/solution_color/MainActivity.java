@@ -33,7 +33,14 @@ public class MainActivity extends AppCompatActivity  {
 
     public Bitmap srcPhotoBitmap;
     public Bitmap sketchPhotoBitmap;
-    public Bitmap colorPhotoBitmap;
+    public Bitmap colorizePhotoBitmap;
+    public Bitmap colorBitmap;
+
+    public int prevSketchiness;
+    public int prevSaturation;
+
+    public boolean changeGreyscale = true;
+    public boolean changeColorize = true;
 
 
     @Override
@@ -58,7 +65,18 @@ public class MainActivity extends AppCompatActivity  {
             Toast.makeText(this, path, Toast.LENGTH_LONG).show();
             currentPhotoPath = path;
             setBitmapAndDisplay(path);
+        }else{
+            image.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.gutters));
+            srcPhotoBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.gutters);
         }
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        int sketchPercent = 10;
+        prevSketchiness = preferences.getInt("sketchiness", sketchPercent);
+
+        int satPercent = 150;
+        prevSaturation = preferences.getInt("saturation", satPercent);
+
 
     }
 
@@ -116,11 +134,21 @@ public class MainActivity extends AppCompatActivity  {
 
     private void doGreyscale(){
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        int percent = 1;
-        percent = preferences.getInt("sketchiness", percent);
+        int sketchPercent = 1;
+        sketchPercent = preferences.getInt("sketchiness", sketchPercent);
 
-        sketchPhotoBitmap = BitMap_Helpers.thresholdBmp(srcPhotoBitmap, percent);
-        image.setImageBitmap(sketchPhotoBitmap);
+        if(sketchPercent == prevSketchiness && !changeGreyscale){
+            image.setImageBitmap(sketchPhotoBitmap);
+        }else {
+            if(!changeGreyscale){
+                prevSketchiness = sketchPercent;
+            }
+            sketchPhotoBitmap = BitMap_Helpers.thresholdBmp(srcPhotoBitmap, sketchPercent);
+            image.setImageBitmap(sketchPhotoBitmap);
+
+
+            changeGreyscale = false;
+        }
 
         Camera_Helpers.saveProcessedImage(sketchPhotoBitmap, currentPhotoPath);
 
@@ -133,33 +161,55 @@ public class MainActivity extends AppCompatActivity  {
 
         int sketchPercent = 1;
         sketchPercent = preferences.getInt("sketchiness", sketchPercent);
-        Bitmap sketchyBM = BitMap_Helpers.thresholdBmp(srcPhotoBitmap, sketchPercent);
+
+        if(sketchPercent != prevSketchiness || changeGreyscale){
+            sketchPhotoBitmap = BitMap_Helpers.thresholdBmp(srcPhotoBitmap, sketchPercent);
+
+            if(!changeGreyscale){
+                prevSketchiness = sketchPercent;
+            }
+
+            changeGreyscale = false;
+        }
+
 
 
 
         int satPercent = 150;
         satPercent = preferences.getInt("saturation", satPercent);
-        Bitmap colorizeBM = BitMap_Helpers.colorBmp(srcPhotoBitmap, satPercent);
+        if(satPercent != prevSaturation || changeColorize){
+            colorBitmap = BitMap_Helpers.colorBmp(srcPhotoBitmap, satPercent);
 
 
-        BitMap_Helpers.merge(colorizeBM, sketchyBM);
-        colorPhotoBitmap = colorizeBM;
-        image.setImageBitmap(colorPhotoBitmap);
-        Camera_Helpers.saveProcessedImage(colorPhotoBitmap, currentPhotoPath);
+            if(!changeColorize){
+                prevSaturation = satPercent;
+            }
+
+            changeColorize = false;
+        }
+
+        BitMap_Helpers.merge(colorBitmap, sketchPhotoBitmap);
+        colorizePhotoBitmap = colorBitmap;
+        image.setImageBitmap(colorizePhotoBitmap);
+        Camera_Helpers.saveProcessedImage(colorizePhotoBitmap, currentPhotoPath);
 
 
     }
-
 
     private void doShare(){
         File file = new File(currentPhotoPath);
         Uri uri = Uri.fromFile(file);
 
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String text = preferences.getString("text", "Look at this photo i took");
+        String subject = preferences.getString("subject", "New App Photo");
+
+
         Intent shareIntent = new Intent();
         shareIntent.setAction(Intent.ACTION_SEND);
         shareIntent.setType("image/jpg");
-        shareIntent.putExtra(Intent.EXTRA_TEXT, "Look at this photo i took");
-        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "New App Photo");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, text);
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
         shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
         startActivity(Intent.createChooser(shareIntent, "Photo"));
 
@@ -171,6 +221,11 @@ public class MainActivity extends AppCompatActivity  {
         image.setImageResource(R.drawable.gutters);
         image.setScaleType(ImageView.ScaleType.FIT_CENTER);
         image.setScaleType(ImageView.ScaleType.FIT_XY);
+
+        srcPhotoBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.gutters);
+
+        changeColorize = true;
+        changeGreyscale = true;
 
     }
 
@@ -201,6 +256,9 @@ public class MainActivity extends AppCompatActivity  {
 
             setBitmapAndDisplay(currentPhotoPath);
 
+            changeColorize = true;
+            changeGreyscale = true;
+
         }
     }
 
@@ -214,8 +272,6 @@ public class MainActivity extends AppCompatActivity  {
 
         editor.putString("path", currentPhotoPath);
         editor.apply();
-
-
 
     }
 }

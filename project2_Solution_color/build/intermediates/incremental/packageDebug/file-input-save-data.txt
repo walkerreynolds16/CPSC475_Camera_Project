@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Feb 28 01:54:49 EST 2017
+#Tue Feb 28 03:27:04 EST 2017
 122.file=C\:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png
 60.set=ANDROID_RESOURCE
 129.file=C\:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png

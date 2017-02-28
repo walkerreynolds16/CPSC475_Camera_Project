@@ -1,4 +1,4 @@
-#Tue Feb 28 01:54:49 EST 2017
+#Tue Feb 28 03:27:04 EST 2017
 base.0=C\:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_45eaa24d633b6be2cac99e4af2866bdcab97b15c
 renamed.1=classes2.dex
 renamed.0=classes.dex
