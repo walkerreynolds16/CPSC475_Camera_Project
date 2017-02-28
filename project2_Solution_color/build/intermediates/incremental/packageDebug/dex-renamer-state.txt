@@ -1,7 +1,7 @@
-#Sat Feb 25 03:04:04 EST 2017
-base.0=C\:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\project2_Solution_color\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_7e8eb06c03795021f012a8141fcbe554a535c581
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\project2_Solution_color\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_3af1a70f3d89be906a24db4e770253fa3416b485\\classes.dex
-base.1=C\:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\project2_Solution_color\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_3af1a70f3d89be906a24db4e770253fa3416b485
-file.0=C\:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\project2_Solution_color\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_7e8eb06c03795021f012a8141fcbe554a535c581\\classes.dex
+#Tue Feb 28 01:54:49 EST 2017
+base.0=C\:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_45eaa24d633b6be2cac99e4af2866bdcab97b15c
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_8949f268a2cbc62e469c25a76c3149449fe6ea42\\classes.dex
+base.1=C\:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_8949f268a2cbc62e469c25a76c3149449fe6ea42
+file.0=C\:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_45eaa24d633b6be2cac99e4af2866bdcab97b15c\\classes.dex

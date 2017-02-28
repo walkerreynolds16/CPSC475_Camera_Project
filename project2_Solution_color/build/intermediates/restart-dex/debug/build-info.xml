@@ -5,32 +5,40 @@
     density="xxxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="17868978046019"
-    token="1090657396989599823"
+    timestamp="989604129619218"
+    token="-438597185822655881"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="90" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="16" />
     <task
         name="verifier"
-        duration="0" />
+        duration="5" />
+
+    <artifact
+        location="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="17715018561633"
+        timestamp="987871556631735"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Walker\Desktop\475\Project2_Intents-master\P2_skel\project2_Solution_color\build\outputs\apk\project2_Solution_color-debug.apk"
+            location="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\outputs\apk\project2_Solution_color-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="17868978046019"
-        verifier="COLD_SWAP_REQUESTED" />
+        timestamp="989604129619218"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
+    </build>
 
 </instant-run>

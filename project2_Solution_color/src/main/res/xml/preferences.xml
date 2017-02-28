@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
-    <EditTextPreference android:title="Your Name"
-        android:key="username"
-        android:summary="Please provide your username"></EditTextPreference>
-    <CheckBoxPreference android:title="Sample Checkbox Pref"
-        android:defaultValue="false"
-        android:summary="Longwinded explanation goes here"
-        android:key="applicationUpdates" />
-    
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Share Options">
+        <EditTextPreference android:title="Share Subject"
+            android:key="subject"
+            android:summary="This is the subject of the messages you would like to share"
+            android:defaultValue="Photo"/>
+        <EditTextPreference android:title="Share Text"
+            android:summary="This is the text you would like to share"
+            android:key="text"
+            android:text="Look at this cool photo I took."/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Rendering Options">
+        <PreferenceScreen
+            android:key="imageCustomize"
+            android:title="Customize Image"
+            android:summary="Customize the level of sketchiness and color saturation"
+            android:persistent="false">
+
+                <com.example.helpers.SeekBarPreference
+                    android:key="sketchiness"
+                    android:title="Sketchiness"
+                    android:summary="Set BW threshold, higher numbers correspond to less detail and whiter image"
+                    android:defaultValue="50"
+                    android:max="99"/>
+
+                <com.example.helpers.SeekBarPreference
+                    android:key="saturation"
+                    android:title="Saturation"
+                    android:summary="Set color saturation, higher numbers correspond to more colorful images"
+                    android:defaultValue="150"
+                    android:max="255"/>
+
+        </PreferenceScreen>
+
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
+

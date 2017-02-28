@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\project2_Solution_color\\build\\intermediates\\res\\merged\\debug\\xml\\file_paths.xml",
-        "source": "C:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\project2_Solution_color\\src\\main\\res\\xml\\file_paths.xml"
+        "merged": "C:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
+        "source": "C:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\src\\main\\res\\xml\\preferences.xml"
     },
     {
-        "merged": "C:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\project2_Solution_color\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
-        "source": "C:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\project2_Solution_color\\src\\main\\res\\xml\\preferences.xml"
+        "merged": "C:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\build\\intermediates\\res\\merged\\debug\\xml\\file_paths.xml",
+        "source": "C:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\project2_Solution_color\\src\\main\\res\\xml\\file_paths.xml"
     }
 ]
