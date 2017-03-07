@@ -3,57 +3,57 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.1_e5f600646fb920cf4c3dbd06fb840b6bae1f3a40\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="07d325028dbe96edf8e6ebd66b61e4efb99f69c5">
-        <dex dex="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_8949f268a2cbc62e469c25a76c3149449fe6ea42\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Walker\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.1_0370e264a6296b8e96b68a70d97fcde29a19eccd\classes.dex" />
+        <dex dex="C:\Users\Walker\Desktop\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.1_0370e264a6296b8e96b68a70d97fcde29a19eccd\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jar="C:\Users\Walker\Desktop\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3647bc1b3c0785a4cd472f83895c9cb5438b8ee4">
+        <dex dex="C:\Users\Walker\Desktop\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_ec618d74d6e70c51b9b992eeb8c50694033e3877\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Walker\Desktop\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.1_7210964bd2bba45147bb3ec2649ecce32e01932a\classes.dex" />
+        <dex dex="C:\Users\Walker\Desktop\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.1_d45283293f04c594b78b9767eee70f12bd947792\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\Walker\Desktop\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="260fb363e223028c867af016794a1bb434a4be20">
-        <dex dex="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_45eaa24d633b6be2cac99e4af2866bdcab97b15c\classes.dex" />
+        sha1="f0567bc43c59ec4a00c6d0b2a3ed14da4e9b126f">
+        <dex dex="C:\Users\Walker\Desktop\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_5a437e67255047b5bfbbc1bf9c2fbcde1d436a65\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jar="C:\Users\Walker\Desktop\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="C:\Users\Walker\Desktop\Programming\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.1_486293f187241e4a5db2565929c7e8dcd443da4e\classes.dex" />
+        <dex dex="C:\Users\Walker\Desktop\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.1_e167dec3ade7da2fa21737f96c9ef901d6f2aaf9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Walker\Desktop\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\Walker\Desktop\CPSC475_Camera_Project\project2_Solution_color\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.1_98f0a15aa66e990fbcfcd228eba6ec8ef9942c07\classes.dex" />
     </item>
 
 </items>

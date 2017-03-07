@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\bitmap_utilities\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "outputFile": "C:\\Users\\Walker\\Desktop\\CPSC475_Camera_Project\\bitmap_utilities\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,31 +11,7 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "C:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\bitmap_utilities\\build\\intermediates\\bundles\\debug\\res\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 58,
-                        "endOffset": 109
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\bitmap_utilities\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 58,
-                    "endOffset": 109
-                },
-                "from": {
-                    "file": "C:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\bitmap_utilities\\build\\intermediates\\bundles\\debug\\res\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+                    "file": "C:\\Users\\Walker\\Desktop\\CPSC475_Camera_Project\\bitmap_utilities\\build\\intermediates\\bundles\\debug\\res\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

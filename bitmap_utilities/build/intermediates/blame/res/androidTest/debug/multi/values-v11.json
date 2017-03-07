@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\bitmap_utilities\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v11\\values-v11.xml",
+        "outputFile": "C:\\Users\\Walker\\Desktop\\CPSC475_Camera_Project\\bitmap_utilities\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v11\\values-v11.xml",
         "map": [
             {
                 "to": {
@@ -12,33 +12,7 @@
                     "endOffset": 187
                 },
                 "from": {
-                    "file": "C:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\bitmap_utilities\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 4,
-                        "endColumn": 12,
-                        "endOffset": 187
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\bitmap_utilities\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v11\\values-v11.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endLine": 4,
-                    "endColumn": 12,
-                    "endOffset": 187
-                },
-                "from": {
-                    "file": "C:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\bitmap_utilities\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Walker\\Desktop\\CPSC475_Camera_Project\\bitmap_utilities\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +17,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.library.bitmap_utilities.BitMap_Helpers;
@@ -25,6 +29,7 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity  {
     private static final int CAMERA_REQUEST = 1888;
     private static final String PREF_NAME = "pathName";
+    private static final String DEFAULT_PATH = Environment.getExternalStorageDirectory().getPath();
 
     public Toolbar myToolbar;
     private String currentPhotoPath;
@@ -39,8 +44,14 @@ public class MainActivity extends AppCompatActivity  {
     public int prevSketchiness;
     public int prevSaturation;
 
+    public float cameraStartAlpha;
+    public float myToolbarStartAlpha;
+
     public boolean changeGreyscale = true;
     public boolean changeColorize = true;
+    public boolean isFullscreen = false;
+
+    public ImageView camera;
 
 
     @Override
@@ -55,19 +66,32 @@ public class MainActivity extends AppCompatActivity  {
         setSupportActionBar(myToolbar);
         myToolbar.getBackground().setAlpha(100);
         image = (ImageView)findViewById(R.id.imageView);
+        camera = (ImageButton)findViewById(R.id.cameraIcon);
 
+        cameraStartAlpha = camera.getAlpha();
+        myToolbarStartAlpha = myToolbar.getAlpha();
 
 
         SharedPreferences sp = getSharedPreferences(PREF_NAME, 0);
         String path = sp.getString("path", null);
 
         if(path != null){
-            Toast.makeText(this, path, Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, path, Toast.LENGTH_LONG).show();
             currentPhotoPath = path;
             setBitmapAndDisplay(path);
+
+            if(srcPhotoBitmap == null){
+                image.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.gutters));
+                srcPhotoBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.gutters);
+            }
         }else{
             image.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.gutters));
             srcPhotoBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.gutters);
+
+            if(currentPhotoPath == null){
+                currentPhotoPath = DEFAULT_PATH;
+            }
+
         }
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -85,6 +109,7 @@ public class MainActivity extends AppCompatActivity  {
 
         srcPhotoBitmap = Camera_Helpers.loadAndScaleImage(path, dm.heightPixels, dm.widthPixels);
         image.setImageBitmap(srcPhotoBitmap);
+
     }
 
 
@@ -273,6 +298,58 @@ public class MainActivity extends AppCompatActivity  {
         editor.putString("path", currentPhotoPath);
         editor.apply();
 
+    }
+
+    //TODO implement animation for smooth alpha change
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        super.onTouchEvent(event);
+//        if(event.getAction() == MotionEvent.ACTION_DOWN) {
+//
+//            int x = (int) event.getX();
+//            int y = (int) event.getY();
+//
+//            Rect cameraRect = new Rect();
+//            camera.getHitRect(cameraRect);
+//
+//            Rect toolbarRect = new Rect();
+//            myToolbar.getHitRect(toolbarRect);
+//
+//            if (!cameraRect.contains(x, y) && !toolbarRect.contains(x, y) && !isFullscreen) {
+//                doFullscreen(1);
+//                isFullscreen = true;
+//            } else {
+//                doFullscreen(-1);
+//                isFullscreen = false;
+//            }
+//        }
+        return false;
+    }
+
+    private void doFullscreen(int modifier){
+        if(modifier > 0){
+
+            for(float i = camera.getAlpha(); i > 0.0f; i-= 0.0001){
+                camera.setAlpha(i);
+            }
+
+            for(float i = myToolbar.getAlpha(); i > 0.0f; i-= 0.0001){
+                myToolbar.setAlpha(i);
+            }
+
+        }else if(modifier < 0){
+
+            for(float i = 0; i < cameraStartAlpha; i+= 0.0001){
+                camera.setAlpha(i);
+            }
+
+            for(float i = 0; i < myToolbarStartAlpha; i+= 0.0001){
+                myToolbar.setAlpha(i);
+                System.out.println(i);
+            }
+
+        }
     }
 }
 

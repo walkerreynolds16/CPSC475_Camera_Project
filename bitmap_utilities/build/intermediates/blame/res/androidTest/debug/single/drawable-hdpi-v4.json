@@ -1,10 +1,6 @@
 [
     {
-        "merged": "C:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\bitmap_utilities\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Walker\\Desktop\\Programming\\CPSC475_Camera_Project\\bitmap_utilities\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\bitmap_utilities\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Walker\\Desktop\\475\\Project2_Intents-master\\P2_skel\\bitmap_utilities\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ic_launcher.png"
+        "merged": "C:\\Users\\Walker\\Desktop\\CPSC475_Camera_Project\\bitmap_utilities\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Walker\\Desktop\\CPSC475_Camera_Project\\bitmap_utilities\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ic_launcher.png"
     }
 ]
